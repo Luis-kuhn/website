@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Luis Augusto Kühn</title>
+    <link rel="shortcut icon" href="img/terminal.ico" alt="" />  
+   
+    <!-- Imports -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/2a16ac0778.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <header>
+        <center>
+            <p id="nome"></p>
+        </center>
+        <center>
+            <p id="menu">
+
+                <a href="http://linkedin.com/in/luis-augusto-kühn"> <i class="fab fa-linkedin"></i> | </a>
+                <a href="https://github.com/Luis-kuhn"><i class="fab fa-github-square"></i> | </a>
+                <a href="./file/Currículo_Luis_A._Kühn.pdf"><i class="fas fa-file-download"></i></a>
+ 
+            </p>
+        </center>
+
+    </header>
+
+
+</body>
+
+<script>
+    text = 'Luis Augusto Kühn'
+    escrita(text, 90, 'nome')
+
+    function escrita (texto, velocidade, id) {
+        var content = texto;
+        var text = document.getElementById(id);
+        var speed = velocidade;
+        var cont = 0;
+        function typeWriter () {
+            if(cont < content.length){
+                text.textContent += content.charAt(cont);
+                cont++;
+                setTimeout(typeWriter, speed);
+            }else{
+                cont = 0;
+
+            }
+        }   
+        typeWriter();
+    }
+</script>
+</html>
